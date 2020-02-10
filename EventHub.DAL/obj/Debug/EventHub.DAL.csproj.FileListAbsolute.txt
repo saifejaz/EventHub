@@ -1,0 +1,13 @@
+C:\Users\saifejaz\source\repos\EventHub\EventHub.DAL\obj\Debug\EventHub.DAL.csproj.CoreCompileInputs.cache
+C:\Users\saifejaz\source\repos\EventHub\EventHub.DAL\bin\Debug\EventHub.DAL.dll.config
+C:\Users\saifejaz\source\repos\EventHub\EventHub.DAL\bin\Debug\EventHub.DAL.dll
+C:\Users\saifejaz\source\repos\EventHub\EventHub.DAL\bin\Debug\EventHub.DAL.pdb
+C:\Users\saifejaz\source\repos\EventHub\EventHub.DAL\bin\Debug\EntityFramework.dll
+C:\Users\saifejaz\source\repos\EventHub\EventHub.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\saifejaz\source\repos\EventHub\EventHub.DAL\bin\Debug\EntityFramework.xml
+C:\Users\saifejaz\source\repos\EventHub\EventHub.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\saifejaz\source\repos\EventHub\EventHub.DAL\obj\Debug\EventHub.DAL.csproj.CopyComplete
+C:\Users\saifejaz\source\repos\EventHub\EventHub.DAL\obj\Debug\EventHub.DAL.dll
+C:\Users\saifejaz\source\repos\EventHub\EventHub.DAL\obj\Debug\EventHub.DAL.pdb
+C:\Users\saifejaz\source\repos\EventHub\EventHub.DAL\obj\Debug\EventHub.DAL.Migrations.abc.resources
+C:\Users\saifejaz\source\repos\EventHub\EventHub.DAL\obj\Debug\EventHub.DAL.csproj.GenerateResource.cache

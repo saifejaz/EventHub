@@ -1,0 +1,15 @@
+C:\Users\saifejaz\source\repos\EventHub\EventHub.BLL\bin\Debug\EventHub.BLL.dll
+C:\Users\saifejaz\source\repos\EventHub\EventHub.BLL\bin\Debug\EventHub.BLL.pdb
+C:\Users\saifejaz\source\repos\EventHub\EventHub.BLL\obj\Debug\EventHub.BLL.csproj.CoreCompileInputs.cache
+C:\Users\saifejaz\source\repos\EventHub\EventHub.BLL\obj\Debug\EventHub.BLL.dll
+C:\Users\saifejaz\source\repos\EventHub\EventHub.BLL\obj\Debug\EventHub.BLL.pdb
+C:\Users\saifejaz\source\repos\EventHub\EventHub.BLL\obj\Debug\EventHub.BLL.csprojAssemblyReference.cache
+C:\Users\saifejaz\source\repos\EventHub\EventHub.BLL\bin\Debug\EventHub.BLL.dll.config
+C:\Users\saifejaz\source\repos\EventHub\EventHub.BLL\bin\Debug\EntityFramework.dll
+C:\Users\saifejaz\source\repos\EventHub\EventHub.BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\saifejaz\source\repos\EventHub\EventHub.BLL\bin\Debug\EventHub.DAL.dll
+C:\Users\saifejaz\source\repos\EventHub\EventHub.BLL\bin\Debug\EventHub.DAL.pdb
+C:\Users\saifejaz\source\repos\EventHub\EventHub.BLL\bin\Debug\EventHub.DAL.dll.config
+C:\Users\saifejaz\source\repos\EventHub\EventHub.BLL\bin\Debug\EntityFramework.xml
+C:\Users\saifejaz\source\repos\EventHub\EventHub.BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\saifejaz\source\repos\EventHub\EventHub.BLL\obj\Debug\EventHub.BLL.csproj.CopyComplete
