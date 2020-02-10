@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace EventHub.Areas.UserMan.Controllers
 {
+    [Authorize(Roles = "A,U")]
     public class EventController : Controller
     {
         private UserBs objUserBs;
@@ -29,6 +30,7 @@ namespace EventHub.Areas.UserMan.Controllers
         [HttpPost]
         public ActionResult Create(EventHub.DAL.Event tempEvent)
         {
+            tempEvent.UserID = objUserBs.GetALL().Where(x=>x.Email==User.Identity.Name).FirstOrDefault().UserID;
             try
             {
                 if (ModelState.IsValid)

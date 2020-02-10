@@ -41,6 +41,7 @@ namespace EventHub.Areas.Security.Controllers
             }
         }
 
+        [Authorize(Roles = "A,U")]
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();

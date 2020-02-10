@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace EventHub.Areas.Admin.Controllers
 {
+    [Authorize(Roles ="A")]
     public class ListEventsController : BaseAdminController
     {
         // GET: Admin/ListEvents

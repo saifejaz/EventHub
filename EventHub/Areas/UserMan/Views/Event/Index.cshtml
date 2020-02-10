@@ -41,12 +41,12 @@
                 @*@Html.EditorFor(model => model.Location, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.DropDownList("Location", new List<SelectListItem>
                 {
-                    new SelectListItem{Text="Gurgaon", Value="1" },
-                    new SelectListItem{Text="Delhi", Value="2" },
-                    new SelectListItem{Text="Noida", Value="3" },
-                    new SelectListItem{Text="Gr.Noida", Value="4" },
-                    new SelectListItem{Text="Ghaziabad", Value="5" },
-                    new SelectListItem{Text="Faridabad", Value="6" },
+                    new SelectListItem{Text="Gurgaon", Value="Gurgaon" },
+                    new SelectListItem{Text="Delhi", Value="Delhi" },
+                    new SelectListItem{Text="Noida", Value="Noida" },
+                    new SelectListItem{Text="Gr.Noida", Value="Gr.Noida" },
+                    new SelectListItem{Text="Ghaziabad", Value="Ghaziabad" },
+                    new SelectListItem{Text="Faridabad", Value="Faridabad" },
                 }
                 )
                 @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
@@ -67,8 +67,8 @@
                 @*@Html.EditorFor(model => model.Type, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.DropDownList("Type", new List<SelectListItem>
                 {
-                    new SelectListItem{Text="Public", Value="1" },
-                    new SelectListItem{Text="Private", Value="2" },
+                    new SelectListItem{Text="Public", Value="Public" },
+                    new SelectListItem{Text="Private", Value="Private" },
                 }
                 )
                 @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
@@ -99,14 +99,7 @@
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.UserID, "UserID", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("UserID", null, htmlAttributes: new { @class = "form-control" })
-                @*@Html.EditorFor(model => model.UserID, new { htmlAttributes = new { @class = "form-control" } })*@
-                @Html.ValidationMessageFor(model => model.UserID, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
@@ -116,6 +109,4 @@
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+
