@@ -12,7 +12,6 @@ namespace EventHub.Areas.Common.Controllers
         // GET: Common/Home
         public ActionResult Index()
         {
-            // Bk chodi Kr di
             return View();
         }
     }
