@@ -54,10 +54,11 @@
     <Compile Include="Event.cs" />
     <Compile Include="EventDb.cs" />
     <Compile Include="Invitation.cs" />
+    <Compile Include="InvitationDb.cs" />
     <Compile Include="ListEventDb.cs" />
-    <Compile Include="Migrations\202002070655234_abc.cs" />
-    <Compile Include="Migrations\202002070655234_abc.designer.cs">
-      <DependentUpon>202002070655234_abc.cs</DependentUpon>
+    <Compile Include="Migrations\202002110722192_init.cs" />
+    <Compile Include="Migrations\202002110722192_init.designer.cs">
+      <DependentUpon>202002110722192_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OurDbContext.cs" />
@@ -70,8 +71,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202002070655234_abc.resx">
-      <DependentUpon>202002070655234_abc.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202002110722192_init.resx">
+      <DependentUpon>202002110722192_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,33 +7,33 @@ using System.Threading.Tasks;
 
 namespace EventHub.BLL
 {
-    public class UserBs
+    public class InvitationBs
     {
-        private UserDb objDb;
+        private InvitationDb objDb;
 
-        public UserBs()
+        public InvitationBs()
         {
-            objDb = new UserDb();
+            objDb = new InvitationDb();
         }
 
-        public IEnumerable<User> GetALL()
+        public IEnumerable<Invitation> GetALL()
         {
             return objDb.GetALL();
         }
 
-        public User GetByID(int id)
+        public Invitation GetByID(int id)
         {
             return objDb.GetByID(id);
         }
 
-        public User GetByEmail(string email)
+        public Invitation GetByEmail(string email)
         {
             return objDb.GetByEmail(email);
         }
 
-        public void Insert(User testUser)
+        public void Insert(Invitation testInvitation)
         {
-            objDb.Insert(testUser);
+            objDb.Insert(testInvitation);
         }
 
         public void Delete(int id)
@@ -41,9 +41,9 @@ namespace EventHub.BLL
             objDb.Delete(id);
         }
 
-        public void Update(User testUser)
+        public void Update(Invitation testInvitation)
         {
-            objDb.Update(testUser);
+            objDb.Update(testInvitation);
         }
     }
 }

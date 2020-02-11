@@ -22,19 +22,27 @@
                 <ul class="nav navbar-nav">
 
                     <li>@Html.ActionLink("Home", "Index", new { Controller = "Home", Area = "Common" })</li>
-                    <li>@Html.ActionLink("BrowseEvents", "Index", new { Controller = "BrowseEvents", Area = "Common" })</li>
+                    @*<li>@Html.ActionLink("BrowseEvents", "Index", new { Controller = "BrowseEvents", Area = "Common" })</li>*@
 
                     @if (User.Identity.IsAuthenticated)
                     {
                         if (User.IsInRole("A"))
                         {
-                        <li>@Html.ActionLink("ListEvents", "Index", new { Controller = "ListEvents", Area = "Admin" })</li>
-                        <li>@Html.ActionLink("ListUsers", "Index", new { Controller = "ListUsers", Area = "Admin" })</li>
+                            <li>@Html.ActionLink("ListEvents", "Index", new { Controller = "ListEvents", Area = "Admin" })</li>
+                            <li>@Html.ActionLink("ListUsers", "Index", new { Controller = "ListUsers", Area = "Admin" })</li>
                         }
-                        if(User.IsInRole("A") || User.IsInRole("U"))
+                        if (User.IsInRole("U"))
                         {
-                        <li>@Html.ActionLink("CreateEvent", "Index", new { Controller = "Event", Area = "UserMan" })</li>
-                        <li>@Html.ActionLink("Logout", "Logout", new { Controller = "Login", Area = "Security" })</li>
+                            <li>@Html.ActionLink("CreateEvent", "Index", new { Controller = "Event", Area = "UserMan" })</li>
+                            <li>@Html.ActionLink("MyEvents", "MyEvents", new { Controller = "Event", Area = "Userman" })</li>
+                            <li>@Html.ActionLink("EventsIAmInvitedTo", "EventsIAmInvitedTo", new { Controller = "Event", Area = "Userman" })</li>
+                        }
+                        if (User.IsInRole("A") || User.IsInRole("U"))
+                        {
+
+                            <li>@Html.ActionLink("Logout", "Logout", new { Controller = "Login", Area = "Security" })</li>
+                            
+
                         }
                     }
                     else

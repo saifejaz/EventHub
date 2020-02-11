@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EventHub.DAL
 {
@@ -38,6 +39,9 @@ namespace EventHub.DAL
 
         [Required(ErrorMessage = "Other Details is required")]
         public string OtherDetails { get; set; }
+
+        [NotMapped]
+        public string SendInvitationTo { get; set; }
 
         public int UserID { get; set; }
         public virtual User User { get; set; }

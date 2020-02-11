@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EventHub.BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,10 +10,24 @@ namespace EventHub.Areas.Common.Controllers
     [AllowAnonymous]
     public class HomeController : Controller
     {
+        private EventBs objEventBs;
+        public HomeController()
+        {
+            objEventBs = new EventBs();
+        }
         // GET: Common/Home
         public ActionResult Index()
         {
-            return View();
+            var output = objEventBs.GetALL();
+            return View(output);
+        }
+
+        public ActionResult EventDetail(int id)
+        {
+            var output = objEventBs.GetByID(id);
+            if (output == null)
+                return HttpNotFound();
+            return View(output);
         }
     }
 }

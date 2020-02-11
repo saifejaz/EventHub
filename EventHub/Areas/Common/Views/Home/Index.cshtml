@@ -1,5 +1,65 @@
-﻿@{
+﻿@model IEnumerable<EventHub.DAL.Event>
+
+@{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Home</h2>
+<h1 style="color:#008B8B; text-align:justify;"> Events </h1>
+<br />
+<br />
+
+
+@{
+    <table style="width:50%; float:left">
+        <tr><td> <h6> <b> Upcoming Events</b></h6></td></tr>
+        <tr><td><b> @Html.DisplayNameFor(model => model.Title)<b></td></tr>
+
+        @foreach (var item in Model)
+        {
+
+            if (DateTime.Now < item.Date && item.Type == "Public")
+            {
+
+                <tr>
+                    <td>
+                        @Html.ActionLink(item.Title, "EventDetail", "Home", new { id = item.EventID }, null)
+
+                    </td>
+                </tr>
+            }
+        }
+
+    </table>
+
+    <table style="width:50%; float:left">
+
+        <tr>
+            <td> <h6> <b>Past Events</b></h6></td>
+        </tr>
+        <tr><td> <b>@Html.DisplayNameFor(model => model.Title)<b></td></tr>
+
+        @foreach (var item in Model)
+        {
+
+            if (DateTime.Now > item.Date && item.Type == "Public")
+            {
+                <tr>
+                    <td>
+
+                        @Html.ActionLink(item.Title, "EventDetail", "Home", new { id = item.EventID }, null)
+                    </td>
+                </tr>
+
+            }
+        }
+    </table>
+}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

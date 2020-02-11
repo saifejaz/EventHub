@@ -26,6 +26,11 @@ namespace EventHub.DAL
             return db.Users.Find(id);
         }
 
+        public User GetByEmail(string email)
+        {
+            return db.Users.Where(x => x.Email == email).FirstOrDefault();
+        }
+
         public void Insert(User testUser)
         {
             db.Users.Add(testUser);

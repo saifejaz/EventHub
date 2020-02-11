@@ -1,17 +1,17 @@
 ﻿@model EventHub.DAL.Event
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create Event</h2>
+<h2>Edit</h2>
 @if (TempData["Msg"] != null)
 {<h3>
         @TempData["Msg"].ToString()
     </h3>}
 
-@using (Html.BeginForm("Create", "Event", FormMethod.Post))
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
@@ -19,6 +19,8 @@
         <h4>Event</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.EventID)
+
         <div class="form-group">
             @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -38,15 +40,14 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @*@Html.EditorFor(model => model.Location, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.DropDownList("Location", new List<SelectListItem>
                 {
-                    new SelectListItem{Text="Gurgaon", Value="Gurgaon" },
-                    new SelectListItem{Text="Delhi", Value="Delhi" },
-                    new SelectListItem{Text="Noida", Value="Noida" },
-                    new SelectListItem{Text="Gr.Noida", Value="Gr.Noida" },
-                    new SelectListItem{Text="Ghaziabad", Value="Ghaziabad" },
-                    new SelectListItem{Text="Faridabad", Value="Faridabad" },
+                    new SelectListItem{Text="Gurgaon", Value="1" },
+                    new SelectListItem{Text="Delhi", Value="2" },
+                    new SelectListItem{Text="Noida", Value="3" },
+                    new SelectListItem{Text="Gr.Noida", Value="4" },
+                    new SelectListItem{Text="Ghaziabad", Value="5" },
+                    new SelectListItem{Text="Faridabad", Value="6" },
                 }
                 )
                 @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
@@ -64,11 +65,11 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownListFor(model => model.Type, new List<SelectListItem>
+                @Html.DropDownList("Type", new List<SelectListItem>
                 {
-                    new SelectListItem{Text="Public", Value="Public" },
-                    new SelectListItem{Text="Private", Value="Private" },
-                }, "Select", new { @id = "myid", @class = "myclass", @OnChange = "SelectedText(this)" }
+                    new SelectListItem{Text="Public", Value="1" },
+                    new SelectListItem{Text="Private", Value="2" },
+                }
                 )
                 @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
             </div>
@@ -98,40 +99,16 @@
             </div>
         </div>
 
-        <div class="form-group" style="display:none;" id="text">
-            @Html.LabelFor(model => model.SendInvitationTo, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.SendInvitationTo, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.SendInvitationTo, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-
+        
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
-
-<script src="~/Scripts/jquery-3.3.1.min.js"></script>
-
-<script>
-    function SelectedText(ddlitem) {
-        var status = ddlitem.value;
-        var select_status = ddlitem.options[ddlitem.selectedIndex].innerHTML;
-        //alert(select_status)
-        if (select_status == 'Public') {
-
-            $('#text').hide();
-        }
-        else {
-            $('#text').show();
-        }
-
-    }
-
-</script>
+@*<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>*@

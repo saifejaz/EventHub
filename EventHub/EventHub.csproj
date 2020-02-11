@@ -177,6 +177,12 @@
     <Content Include="Areas\Security\Views\Login\Index.cshtml" />
     <Content Include="Areas\UserMan\Views\web.config" />
     <Content Include="Areas\UserMan\Views\Event\Index.cshtml" />
+    <Content Include="Areas\Common\Views\Home\EventDetail.cshtml" />
+    <Content Include="Areas\UserMan\Views\Event\MyEvents.cshtml" />
+    <Content Include="Areas\UserMan\Views\Event\Edit.cshtml" />
+    <Content Include="Areas\UserMan\Views\Event\Details.cshtml" />
+    <Content Include="Areas\UserMan\Views\Event\Delete.cshtml" />
+    <Content Include="Areas\UserMan\Views\Event\EventsIAmInvitedTo.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
