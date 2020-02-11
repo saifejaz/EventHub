@@ -89,7 +89,7 @@ namespace EventHub.Areas.UserMan.Controllers
             }
         }
 
-        //to check the number of invite receve from other users
+        //to show the invitations recieved from other users
         public ActionResult EventsIAmInvitedTo()
         {
             //get all invite where  youe email is stored in database
@@ -100,12 +100,6 @@ namespace EventHub.Areas.UserMan.Controllers
                 getEvent.Add(objEventBs.GetByID(output.EventID));
             }
             return View(getEvent);
-        }
-
-        // to show details of the event invite
-        public ActionResult InviteDetails()
-        {
-            return View();
         }
 
         // to check how many event is created by you and sort according to date creation
