@@ -34,6 +34,7 @@ namespace EventHub.Areas.Admin.Controllers
             return View(events);
         }
 
+        // method to edit the events
         [HttpGet]
         public ActionResult Edit(int id)
         {
@@ -53,6 +54,7 @@ namespace EventHub.Areas.Admin.Controllers
             return View("Index");
         }
 
+        // method to get the details of the event
         [HttpGet]
         public ActionResult Details(int id)
         {
@@ -64,6 +66,7 @@ namespace EventHub.Areas.Admin.Controllers
             return View(events);
         }
 
+        // method to delete the event
         [HttpGet]
         public ActionResult Delete(int id)
         {

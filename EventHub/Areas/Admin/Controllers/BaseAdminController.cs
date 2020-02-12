@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace EventHub.Areas.Admin.Controllers
 {
+    // class to make object of Admin Business Layer
     public class BaseAdminController : Controller
     {
         //private ListEventBs objBs;

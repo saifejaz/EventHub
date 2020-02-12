@@ -34,7 +34,7 @@ namespace EventHub.Areas.UserMan.Controllers
         public ActionResult Index()
         {
             ViewBag.UserID = new SelectList(objUserBs.GetALL().ToList(), "UserID", "Email");
-            return View();
+            return View("Index");
         }
 
         // controller to post event data to database
@@ -72,7 +72,7 @@ namespace EventHub.Areas.UserMan.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    objEventBs.Insert(tempEvent);
+                    //objEventBs.Insert(tempEvent);
                     TempData["Msg"] = "Created Successfully";
                     return RedirectToAction("Index");
                 }

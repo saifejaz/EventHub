@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace EventHub.Areas.Common.Controllers
 {
+    // base class to make object of Common Business Layer
     public class BaseCommonController : Controller
     {
         //private EventBs objBs;

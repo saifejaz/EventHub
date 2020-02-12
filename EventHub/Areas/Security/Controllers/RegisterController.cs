@@ -13,9 +13,10 @@ namespace EventHub.Areas.Security.Controllers
         // GET: Security/Register
         public ActionResult Index()
         {
-            return View();
+            return View("Index");
         }
 
+        // method to register a new user
         [HttpPost]
         public ActionResult Create(EventHub.DAL.User tempUser)
         {

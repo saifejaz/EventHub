@@ -14,9 +14,10 @@ namespace EventHub.Areas.Security.Controllers
         // GET: Security/Login
         public ActionResult Index()
         {
-            return View();
+            return View("Index");
         }
 
+        // method to signin user using authentication
         [HttpPost]
         public ActionResult SignIn(EventHub.DAL.User testUser)
         {
@@ -41,6 +42,7 @@ namespace EventHub.Areas.Security.Controllers
             }
         }
 
+        // method to logout user session
         [Authorize(Roles = "A,U")]
         public ActionResult Logout()
         {

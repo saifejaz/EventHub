@@ -8,6 +8,9 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
+using System.Data.Entity.Infrastructure.Interception;
+using EventHub.DAL.Logging;
+
 namespace EventHub
 {
     public class MvcApplication : System.Web.HttpApplication
@@ -21,6 +24,10 @@ namespace EventHub
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             GlobalFilters.Filters.Add(new AuthorizeAttribute());
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            DbInterception.Add(new SchoolInterceptorTransientErrors());
+            DbInterception.Add(new SchoolInterceptorLogging());
         }
+    
     }
 }

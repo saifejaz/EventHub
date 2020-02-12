@@ -10,6 +10,7 @@ namespace EventHub.Areas.Common.Controllers
     [AllowAnonymous]
     public class HomeController : Controller
     {
+        // object of Event Business Layer
         private EventBs objEventBs;
         public HomeController()
         {
@@ -19,9 +20,10 @@ namespace EventHub.Areas.Common.Controllers
         public ActionResult Index()
         {
             var output = objEventBs.GetALL();
-            return View(output);
+            return View("Index",output);
         }
 
+        // method to show the details of the events
         public ActionResult EventDetail(int id)
         {
             var output = objEventBs.GetByID(id);
